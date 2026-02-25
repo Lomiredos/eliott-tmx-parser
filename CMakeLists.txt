@@ -20,6 +20,8 @@ add_library(eliott-tmx-parser STATIC
 target_include_directories(eliott-tmx-parser PUBLIC
     include/
 )
+if(PROJECT_IS_TOP_LEVEL)
+
 
 add_executable(tests
     tests/test_parser.cpp
@@ -30,7 +32,7 @@ target_link_libraries(tests PRIVATE
     doctest::doctest
     tinyxml2::tinyxml2
 )
-
+endif()
 
 target_link_libraries(eliott-tmx-parser PRIVATE
    tinyxml2::tinyxml2
