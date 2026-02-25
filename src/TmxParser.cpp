@@ -1,5 +1,6 @@
 #include "tmx/TmxParser.hpp"
 #include <filesystem>
+#include <tinyxml2.h>
 #include <sstream>
 #include <iostream>
 

@@ -1,11 +1,13 @@
 #pragma once
 #include <optional>
 #include <string>
-#include <tinyxml2.h>
 #include <vector>
 
 #include "TmxMap.hpp"
 
+namespace tinyxml2{
+    struct XMLElement;
+};
 
 namespace ee::tmx {
 
