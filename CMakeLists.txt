@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.20)
 project(eliott-tmx-parser VERSION 1.0.0 LANGUAGES CXX)
 
+if(TARGET eliott-tmx-parser)
+    return()
+endif()
+
+set(CMAKE_TOOLCHAIN_FILE "C:/Dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_PREFIX_PATH "C:/Dev/vcpkg/installed/x64-mingw-static")
+
 file(COPY tests/data DESTINATION ${CMAKE_BINARY_DIR}/tests)
 
 
