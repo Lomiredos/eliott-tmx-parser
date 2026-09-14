@@ -12,11 +12,13 @@ namespace ee::tmx {
         std::string m_name;
         float m_x;
         float m_y;
-    
+
         float m_width;
         float m_height;
-    
-    
+
+        float m_rotation = 0.0f; // degres (Tiled) ; pivote autour du coin (x,y)
+
+
     };
 
 

@@ -189,6 +189,7 @@ TmxObject ee::tmx::TmxParser::loadObject(tinyxml2::XMLElement *_elem)
     obj.m_y = _elem->FloatAttribute("y");
     obj.m_width = _elem->FloatAttribute("width");
     obj.m_height = _elem->FloatAttribute("height");
+    obj.m_rotation = _elem->FloatAttribute("rotation");
     obj.m_id = _elem->IntAttribute("id");
 
 
