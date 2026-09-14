@@ -31,7 +31,9 @@ static std::vector<int> parseCSV(std::string entry)
 
             try
             {
-                int value = std::stoi(token);
+                // stoul : les GID avec flip flags (bits hauts) depassent INT_MAX ;
+                // on garde le motif binaire tel quel dans l'int.
+                int value = static_cast<int>(std::stoul(token));
                 result.push_back(value);
             }
             catch (const std::exception &e)
